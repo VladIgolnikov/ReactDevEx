@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,12 +10,8 @@ class App extends React.Component {
     // bind functions here
   }
 
-
   render() {
-    return (
-      <div className='app'>
-      </div>
-    );
+    return <div className='app'></div>;
   }
 }
 
