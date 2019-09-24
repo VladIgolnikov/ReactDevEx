@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
-const assets = require('./assets.js');
+const assets = require('./assets');
 
 const dbPath = path.join(__dirname, 'Assets.db');
 
