@@ -6,17 +6,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      assets: [],
-      versions: []
+      assets: []
     };
 
     this.getAssets = this.getAssets.bind(this);
-    this.getVersions = this.getVersions.bind(this);
   }
 
   componentDidMount() {
-    this.getAssets;
-    this.getVersions;
+    this.getAssets();
   }
 
   getAssets() {
@@ -29,19 +26,6 @@ class App extends React.Component {
       })
       .catch(error => {
         console.log(`Error getting assets --> ${error}`);
-      });
-  }
-
-  getVersions() {
-    Axios.get('/versions')
-      .then(response => {
-        const versions = response.data;
-        this.setState({
-          versions: versions
-        });
-      })
-      .catch(error => {
-        console.log(`Error getting versions --> ${error}`);
       });
   }
 
