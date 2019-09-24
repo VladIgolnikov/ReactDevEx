@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to ReactDevEx!');
 });
 
-app.get('/api', (req, res) => {
+app.get('/assets', (req, res) => {
   getAssets()
     .then(results => {
       res.send(results);
@@ -24,14 +24,13 @@ app.get('/api', (req, res) => {
     });
 });
 
-app.post('/api', (req, res) => {
-  const id = req.body.id;
-  getVersions(id)
+app.get('/versions', (req, res) => {
+  getVersions()
     .then(results => {
       res.send(results);
     })
     .catch(error => {
-      console.log(`Error retrieving versions for id ${id} --> ${error}`);
+      console.log(`Error retrieving versions --> ${error}`);
     });
 });
 

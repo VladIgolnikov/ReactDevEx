@@ -14,17 +14,17 @@ const getAssets = () => {
   });
 };
 
-const getVersions = id => {
+const getVersions = () => {
   return new Promise((res, rej) => {
-    db.all(`SELECT * FROM versions WHERE assetId = ${id};`, (err, rows) => {
+    db.all(`SELECT * FROM versions`, (err, rows) => {
       if (err) {
         console.log(
-          `Error retrieving versions for asset ${id} from ReactDevEx DB >> ${err}`
+          `Error retrieving versions from ReactDevEx DB >> ${err}`
         );
         rej(err);
       } else {
         console.log(
-          `Success! Retrieved versions for asset ${id} from ReactDevEx DB`
+          `Success! Retrieved versions from ReactDevEx DB`
         );
         res(rows);
       }
