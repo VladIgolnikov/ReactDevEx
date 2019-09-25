@@ -29,14 +29,13 @@ const getAssets = () => {
             versions = rows;
 
             fullAssets = assets.map(asset => {
-              let newAsset = asset;
-              newAsset.versions = [];
+              asset.versions = [];
               for (let version of versions) {
-                if (version.assetId === newAsset.id) {
-                  newAsset.versions.push(version);
+                if (version.assetId === asset.id) {
+                  asset.versions.push(version);
                 }
               }
-              return newAsset;
+              return asset;
             });
 
             res(fullAssets);

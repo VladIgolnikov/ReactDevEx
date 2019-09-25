@@ -30,7 +30,42 @@ class App extends React.Component {
   }
 
   render() {
-    return <div className='app'></div>;
+    const assets = this.state.assets;
+
+    return (
+      <div className='app'>
+        <header className='navbar'>
+          <div className='nav-header'>
+            <div className='nav-left'>
+              <div className='logo'>
+                <img className='brand-image' src='' />
+              </div>
+              <div className='menu-toggle'>
+                <img src='' />
+              </div>
+            </div>
+            <div className='page-title'>
+              <span>
+                <img className='folder-icon' src='' />
+                <h1>Asset Management</h1>
+                <button className='add-button'> +Add</button>
+                <ul className='breadcrumb'>
+                  <li>Asset Management</li>
+                </ul>
+              </span>
+            </div>
+            <div className='nav-right'>
+              <img className='nav-toggle' src='' />
+              <img className='user-toggle' src='' />
+            </div>
+          </div>
+          <div className='nav-search'>
+            {/* Search component goes here with Filter component in it */}
+          </div>
+        </header>
+        <div className='main'></div>
+      </div>
+    );
   }
 }
 
