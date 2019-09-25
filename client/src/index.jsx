@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Axios from 'axios';
+import Assets from './components/assets.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,18 +38,20 @@ class App extends React.Component {
         <header className='navbar'>
           <div className='nav-header'>
             <div className='nav-left'>
-              <div className='logo'>
-                <img className='brand-image' src='' />
-              </div>
-              <div className='menu-toggle'>
-                <img src='' />
-              </div>
+              <span className='logo'>
+                <img className='brand-image' src='./img/logo_cic.png' />
+              </span>
+              <span className='menu-toggle'>
+                <img src='./img/menu-icon.png' />
+              </span>
             </div>
             <div className='page-title'>
               <span>
-                <img className='folder-icon' src='' />
-                <h1>Asset Management</h1>
+                <img className='folder-icon' src='./img/folder-icon.png' />
+                Asset Management
                 <button className='add-button'> +Add</button>
+              </span>
+              <span>
                 <ul className='breadcrumb'>
                   <li>Asset Management</li>
                 </ul>
@@ -63,7 +66,9 @@ class App extends React.Component {
             {/* Search component goes here with Filter component in it */}
           </div>
         </header>
-        <div className='main'></div>
+        <div className='main'>
+          <Assets assets={this.state.assets} />
+        </div>
       </div>
     );
   }

@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #EEEEEE;
+}
+
+div.nav-header {
+  display: flex;
+  flex-direction: row;
+  background-color:rgb(1, 125, 195);
+  color: white;
+  justify-content: space-between;
+  height: 60px;
+}
+
+img.folder-icon {
+  height: 23px;
+}
