@@ -2,7 +2,7 @@
 
 Build Technologies React Dev Exercise - Vlad Igolnikov -
 
-[www.websitename.com](http://www.awslink.com)
+[bit.ly/BuildTech-ReactDevEx](http://bit.ly/BuildTech-ReactDevEx)
 
 ## Table of Contents
 
@@ -13,26 +13,11 @@ Build Technologies React Dev Exercise - Vlad Igolnikov -
 
 ## Functionality:
 
-### Something Page
-
--    Lorem ipsum:
-
-- `lorem`
-- `ipsum`
-
-### Lorem Ipsum Page
-
--    The lorem ipsum information:
-
-- `foo`
-- `bar`
-- `baz`
-
--    Hello World.
+On page load, the application sends an API request to fetch Assets and their corresponding Versions from a remote database.  Version counts are displayed on each Asset card, which are rendered in responsive grid.
 
 ## Notes
 
-This application uses React and JavaScript on the front end, bundled via webpack. The back end uses Node.js and Express, as well as a SQLite database.
+This application uses React and JavaScript on the front end, bundled via webpack. The back end uses Node.js and Express, as well as a SQLite database, seeded from a provided JSON file.
 
 ## Requirements
 
