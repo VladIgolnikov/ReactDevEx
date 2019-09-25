@@ -46,20 +46,20 @@ class App extends React.Component {
               </span>
             </div>
             <div className='page-title'>
-              <span>
+              <span className='icon-span'>
                 <img className='folder-icon' src='./img/folder-icon.png' />
                 Asset Management
-                <button className='add-button'> +Add</button>
+                <button className='add-button'> + Add</button>
               </span>
-              <span>
+              <span className='breadcrumb-span'>
                 <ul className='breadcrumb'>
                   <li>Asset Management</li>
                 </ul>
               </span>
             </div>
             <div className='nav-right'>
-              <img className='nav-toggle' src='' />
-              <img className='user-toggle' src='' />
+              <img className='nav-toggle' src='./img/nav-toggle.png' />
+              <img className='user-toggle' src='./img/avatar.png' />
             </div>
           </div>
           <div className='nav-search'>
@@ -67,7 +67,7 @@ class App extends React.Component {
           </div>
         </header>
         <div className='main'>
-          <Assets assets={this.state.assets} />
+          <Assets assets={assets} />
         </div>
       </div>
     );
